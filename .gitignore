@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+.env
+.venv/
+venv/
+ENV/
+env/
+*.sqlite3
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Output files
+*.csv
+*.log
+*.out
+*.pkl
+*.sav
+
+# Qiskit
+*.qasm
+*.qobj

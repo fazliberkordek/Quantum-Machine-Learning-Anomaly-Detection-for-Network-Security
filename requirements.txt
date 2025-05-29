@@ -1,0 +1,7 @@
+qiskit>=1.0.0
+qiskit-machine-learning>=0.8.0
+scikit-learn>=1.3.0
+pandas>=1.5.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+numpy>=1.23.0 

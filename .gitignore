@@ -27,6 +27,6 @@ env/
 *.pkl
 *.sav
 
-# Qiskit
+#.qiskit
 *.qasm
 *.qobj

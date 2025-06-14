@@ -1,69 +1,43 @@
-# Quantum Anomaly Detection using Qiskit and CICIDS2017 Dataset
+# Quantum Anomaly Detection on Network Traffic with Quantum Machine Learning
 
-This project applies **Quantum Machine Learning** to detect anomalies in network traffic using the **CICIDS2017 dataset**. It leverages **Qiskit Machine Learning** tools, and is compatible with the latest versions of `qiskit` and `qiskit-machine-learning`.
+## Overview
+This project implements a quantum machine learning model for anomaly detection in network traffic using TensorFlow Quantum and Cirq. It demonstrates a Variational Quantum Classifier (VQC) for binary classification of network traffic as normal or anomalous.
 
-## 🧠 What It Does
+## ⚠️ Platform Compatibility Notice
+**TensorFlow Quantum is not supported natively on Apple Silicon (M1/M2/M3) Macs.**
 
-The project builds a **Variational Quantum Classifier (VQC)** that:
+- If you are using an Apple Silicon Mac, you will not be able to install TensorFlow Quantum directly via pip.
+- The recommended way to run this project is via [Google Colab](https://colab.research.google.com/), which provides a compatible environment and free access to GPUs.
 
-* Takes network traffic features as input,
-* Encodes them into quantum states,
-* Uses a parameterized quantum circuit (ansatz) to learn patterns,
-* Classifies network flows as **normal (BENIGN)** or **anomalous (attack)**.
+## Running on Google Colab
+1. **Open Google Colab:**
+   - Go to [https://colab.research.google.com/](https://colab.research.google.com/)
 
-## 📁 Files
+2. **Upload the Project Files:**
+   - Click on the folder icon in the left sidebar.
+   - Click the upload icon and upload `main.py` and `requirements.txt` from this repository.
 
-* `helper_notebook.ipynb`: Main training and visualization notebook
-* `CICIDS2017_sample.csv`: Sample preprocessed version of the dataset
-* `README.md`: Project overview and instructions
+3. **Install Dependencies:**
+   - At the top of your Colab notebook, run the following cell to install all required packages:
+     ```python
+     !pip install -r requirements.txt
+     ```
 
-## 🛠️ Dependencies
+4. **Run the Main Script:**
+   - In a new cell, run:
+     ```python
+     !python main.py
+     ```
 
-Install the required packages using pip:
+5. **(Optional) Edit and Experiment:**
+   - You can edit `main.py` directly in Colab or upload new versions as needed.
 
-```bash
-pip install qiskit qiskit-machine-learning pandas scikit-learn matplotlib seaborn
-```
+## Project Structure
+- `main.py` — Main script containing the quantum anomaly detection pipeline.
+- `requirements.txt` — List of required Python packages.
 
-## 🚀 How to Run
+## Dataset
+- The script will generate a synthetic sample dataset (`CICIDS2017_sample.csv`) if not present.
 
-1. Place `CICIDS2017_sample.csv` in the root directory.
-2. Open the notebook `helper_notebook.ipynb`.
-3. Run cells in order:
-
-   * Data loading and preprocessing
-   * Quantum model construction (VQC)
-   * Training and evaluation
-   * PCA visualization of predictions
-
-## 📊 Dataset Features Used
-
-The notebook uses the following features from the CICIDS2017 dataset:
-
-* `Flow Duration`
-* `Total Fwd Packets`
-* `Total Backward Packets`
-* `Flow Bytes/s`
-* `Flow Packets/s`
-* `Fwd Packet Length Mean`
-
-Label is mapped to binary:
-
-* `BENIGN` → 0
-* All other types → 1 (anomaly)
-
-## 🧪 Results
-
-* Outputs training and testing accuracy
-* Displays PCA visualization comparing predicted vs true labels
-
-## 📈 Future Enhancements
-
-* Use a larger subset or full CICIDS2017
-* Add confusion matrix and precision/recall metrics
-* Run on IBM Quantum real devices
-* Explore unsupervised anomaly detection (e.g., quantum kernel methods)
-
----
-
-Created with ❤️ using Qiskit by \[Fazli Berk Ordek].
+## License
+MIT

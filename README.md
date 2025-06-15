@@ -1,4 +1,4 @@
-# Quantum Anomaly Detection on Network Traffic with Quantum Machine Learning
+# Anomaly Detection on Network Traffic with Quantum Machine Learning
 
 ## Overview
 This project implements a quantum machine learning model for anomaly detection in network traffic using TensorFlow Quantum and Cirq. It demonstrates a Variational Quantum Classifier (VQC) for binary classification of network traffic as normal or anomalous.
